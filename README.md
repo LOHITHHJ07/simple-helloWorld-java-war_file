@@ -1,4 +1,5 @@
  Hello World Java application packaged as a war file
+  change in read me  file for dev
 
 ## Prerequisites
 
