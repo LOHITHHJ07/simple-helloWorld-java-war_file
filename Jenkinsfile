@@ -2,16 +2,15 @@ pipeline {
     agent any
 
     environment {
-        // Define environment variables
-        TOMCAT_USER = credentials('TCadmin')  // Fetch username from Jenkins credentials
-        TOMCAT_PASSWORD = credentials('admin')  // Fetch password from Jenkins credentials
+        TOMCAT_USER = credentials('TCadmin')  // Ensure this credential ID is correct
+        TOMCAT_PASSWORD = credentials('admin')  // Ensure this credential ID is correct
         TOMCAT_URL = 'http://13.201.98.100:8090/manager/text/deploy?path=/'
     }
 
     stages {
         stage('SCM') {
             steps {
-                git 'https://github.com/LOHITHHJ07/simple-helloWorld-java-war_file.git'
+                git url: 'https://github.com/LOHITHHJ07/simple-helloWorld-java-war_file.git'
             }
         }
 
@@ -36,5 +35,6 @@ pipeline {
         }
     }
 }
+
 
 
