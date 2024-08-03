@@ -21,7 +21,7 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+        stage('Deployment') {
             steps {
                 script {
                     def warFile = sh(script: 'find target -name "*.war"', returnStdout: true).trim()
